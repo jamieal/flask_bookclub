@@ -1,0 +1,351 @@
+body { 
+	font-size: 16px;
+	font-family: 'Josefin Sans', sans-serif;
+	background-image: url("/static/images/typewriter4.jpg");
+  background-color: grey;
+  background-position: center left;
+/*  background-image: url("/static/images/Bookclubshelf.jpg");*/
+	padding:10px;
+	padding-bottom:80px; 
+}
+
+
+p {
+	font-size: 16px;
+	color: lavender;
+}
+
+html, body {
+    position: relative;
+    min-height: 100%;
+}
+
+h1 {
+    font-size: 50px;
+	font-family:  'Indie Flower', cursive;
+	color: ghostwhite;
+	padding: 20px 0px;
+}
+
+h2 {
+	font-size: 25px;
+	color: ghostwhite;
+	padding-top: 10px;
+}
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+
+
+.navbar-inverse .navbar-toggle {
+    border-color: ghostwhite;
+    border-width: 1px;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: ghostwhite;
+}
+
+.navbar-toggle .icon-bar {
+    width: 25px;
+    height: 2px;
+}
+
+.navbar-toggle {
+    padding: 16px 26px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+}
+
+@media screen and (min-width: 992px) {
+	a.button1 {
+	width: 60%;	
+   }
+}
+
+@media screen and (max-width: 991px) {
+	a.button1 {
+	width: 90%;
+  } 
+}
+
+
+.navbar-inverse {
+    background-color: transparent;
+	border-color: transparent;
+}
+
+a.button1  {
+	display: block;
+	text-align: center;
+    background-color: rgba(72, 69, 69, 0.56);
+	color: ghostwhite;
+	font-size: 20px;
+	padding: 10px;
+	margin: 20px;
+	border-style: solid;
+    border-width: thin;
+	border-color: ghostwhite;
+	border-radius: 8px;
+}
+
+#smallbutton {
+	font-size:18px;
+	text-align: center;
+	display: inline-block;
+	margin-top: 10px;
+}
+	
+	
+a.button1:hover {
+	text-decoration: none;
+	background-color: rgba(188, 122, 0, 0.67);
+}
+
+
+/* Navigation & Branding */
+
+
+@media screen and (max-width: 767px) {
+#createanaccount {
+	display: block;
+	text-align: center;
+    background-color: rgba(72, 69, 69, 0.37);
+	color: ghostwhite;
+	font-size: 18px;
+	padding: 18px;
+	margin: 20px;
+	border-style: solid;
+    border-width: thin;
+	border-color: ghostwhite;
+	border-radius: 8px;
+  }
+ 
+ #createanaccount:hover {
+	text-decoration: none;
+	background-color: rgba(188, 122, 0, 0.67);
+  }
+}
+
+/* Mobile Nav */
+
+@media (max-width: 767px) {
+    #NavBar{
+		position: absolute;
+        width: 65%;
+        z-index: 9999;
+		float: right;
+		margin-left: 25%;
+		background-color: #6e6565;
+		border-color: ghostwhite;
+		border-style: solid;
+		border-width: 2px;
+		border-radius: 8px;
+    }
+	
+	.navbar-inverse .navbar-nav .open .dropdown-menu>li>a:hover {
+	color: ghostwhite;
+	}
+
+	.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+    color: ghostwhite;
+}
+
+	.navbar-static-top {
+    padding: 6px 0px 0px 6px;
+	}
+
+	.navbar-inverse .navbar-nav>li>a {	
+	padding-left: 10%;
+	}
+	
+	
+	
+	#valueprop {
+	padding-bottom: 20px;
+	padding-top: 0px;
+	margin-top: 0px;
+	}
+	
+	h1 {
+		padding-top: 0px;
+		padding-bottom: 20px;
+		margin-top: 0px;
+	}
+}
+	
+.navbar-inverse .navbar-toggle:focus {
+    background-color: #6e6565;
+}
+
+#navbar {
+	float: right;
+}   
+
+/* Main Nav */ 
+
+.nav>li>a { 
+	padding: 25px 30px 25px 30px;
+	font-size: 18px;
+      }
+ 
+ 
+ @media screen and (max-width: 992px) {
+	.nav>li>a {
+    padding: 23px 25px 25px 15px;
+	font-size: 18px;
+  }	
+}
+
+.navbar-inverse .navbar-toggle:hover {
+    background-color: rgba(51, 51, 51, 0.35);
+	text-decoration: none;
+}
+	
+.navbar-inverse .navbar-nav>li>a {
+    color: ghostwhite;
+	border-color: transparent;
+	border-style: solid;
+    border-width: thin;
+}
+
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+	border-style: solid;
+    border-color: ghostwhite;
+    border-width: thin;
+	border-radius: 8px;
+}	
+	
+	
+	
+ .navbar-static-top {
+    padding: 10px 0 10px 10px;
+}
+
+
+@media screen and (min-width: 992px) { 
+.navbar-inverse a.navbar-brand {
+	font-size: 30px;
+	font-family: 'Indie Flower', cursive;
+	color: ghostwhite;
+	border-color: transparent;
+  }
+}
+
+@media screen and (max-width: 991px) { 
+.navbar-inverse a.navbar-brand {
+	font-size: 23px;
+	font-family: 'Indie Flower', cursive;
+	color: ghostwhite;
+	border-color: transparent;
+  }
+}
+
+
+.navbar-brand {
+    height: 58px;
+	border-color: transparent;
+}
+
+
+
+/* Main Home*/
+
+
+@media screen and (min-width: 992px) {	
+  #floatright {
+    float: right;
+    }
+
+  #floatleft {
+    float: left;
+  }
+
+}
+
+@media screen and (max-width: 991px) {
+	#textright {
+		text-align: center;
+	}
+	
+	#textleft {
+		text-align: center;
+	}
+}
+
+#valueprop {
+	text-align: center;	
+	padding-top: 30px;
+	padding-bottom: 50px;
+
+}
+
+a.button {
+	text-align: center;
+	padding: 20px;
+}
+
+/* About */
+
+.box {
+	background-color: rgba(85, 85, 85, 0.48);
+	min-height: 333px;
+	color: ghostwhite;
+	margin-top: 50px;
+	padding: 1px 20px;
+	border-style: solid;
+	border-width: thin;
+	border-color: ghostwhite;
+	border-radius: 8px;
+	text-align: center;
+}
+
+@media screen and (max-width: 991px) {
+	.box {
+	margin-top: 25px;
+  } 
+}
+
+
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+	.box {
+		min-height: 426px;
+	}
+}	
+
+ul.aboutlist {
+	list-style-type: none;
+	text-align: left;
+	padding: 22px;
+	font-size: 18px;
+}
+
+li.aboutlist {
+	padding: 10px;
+}
+
+/* Footer */
+
+footer {
+	color: ghostwhite;
+	background-color: transparent;
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 30px;
+	width: 100%;
+	position: absolute;
+	overflow: hidden;
+    bottom: 0;
+}
+
+.wrap {
+    height: auto;
+    margin: 0 auto -60px; /* footer height + space */
+    min-height: 100%;
+    padding: 0 0 60px; /* footer height + space */
+    box-sizing: border-box;
+    overflow: auto;
+}

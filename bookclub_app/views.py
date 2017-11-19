@@ -9,15 +9,24 @@ from .emails import new_book_notification, upcoming_notification
 ###LOGIN AND HOME ###################################
 @app.route('/')
 @app.route('/index')
-@login_required
 def index():
     user = g.user
-    books = Book.query.order_by(desc(Book.due_date)).all()
-    wbooks = WishBook.query.filter_by(user=current_user).all()
-    quote = choose_quote()
-    return render_template('index.html', title='Home', user=user,
-            books=books, wbooks=wbooks, quote=quote)
+    if g.user is not None and g.user.is_authenticated:
+        books = Book.query.order_by(desc(Book.due_date)).all()
+        wbooks = WishBook.query.filter_by(user=current_user).all()
+        quote = choose_quote()
+        return render_template('index.html', title='Home', user=user,
+                books=books, wbooks=wbooks, quote=quote)
+    return app.send_static_file('index_signedout.html')
 
+@app.route('/about')
+def about():
+    return app.send_static_file('about.html')
+	
+@app.route('/sign_up')
+def sign_up():
+    return render_template('sign_up.html', title='Sign Up')	
+	
 @lm.user_loader
 def load_user(id):
     return User.query.get(int(id))
@@ -51,7 +60,7 @@ def login():
 @login_required
 def logout():
     logout_user()
-    return redirect(url_for('login'))
+    return redirect(url_for('index'))
 
 @app.route('/add_book')
 @login_required
@@ -107,7 +116,7 @@ def new_book():
             flash('Notification sent.')
         return redirect(url_for('book', title=book.title))
     
-    return render_template('new_book.html', title='Add a New Book', form=form,
+    return render_template('new_book.html', title='Add a New Bookclub Book', form=form,
             quotes=quotes, length_chars=None)
 
 @app.route('/book/<title>/edit', methods=['GET','POST'])
@@ -231,7 +240,7 @@ def review_delete(title):
 def wishlist():
     books = WishBook.query.filter_by(user=current_user).all()
     quote = choose_quote()
-    return render_template('wishlist.html', title='My Wishlist', user=current_user, books=books, quote=quote)
+    return render_template('wishlist.html', title='My Reading List', user=current_user, books=books, quote=quote)
 
 
 @app.route('/wishlist/new', methods=['GET','POST'])
@@ -247,7 +256,7 @@ def add_wishbook():
         flash('New book has been added!')
         return redirect(url_for('index'))
 #        return redirect(url_for('wishlist'))
-    return render_template('new_wishbook.html', title='Add a New Book',
+    return render_template('new_wishbook.html', title='Add a New Reading List Book',
             form=form, length_chars=None)
 
 @app.route('/wishlist/<title>/edit', methods=['GET', 'POST'])
